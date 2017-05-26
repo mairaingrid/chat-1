@@ -1,0 +1,18 @@
+<template name="soporteTemplate">
+	{{#if currentUser}}
+		{{#if isInRole 'soporte' 'profesor'}}
+			{{>templateSupport}}
+		{{else}}
+			{{>templateClient}}
+		{{/if}}
+	{{else}}
+		<div class="row">
+			<div class="col s12">
+				<div class="card-panel teal">
+					<span class="white-text">señor usuario para hacer usu del soporte tecnico es necesario que cree una cuenta primero
+					</span>
+				</div>
+			</div>
+		</div>
+	{{/if}}
+</template>
